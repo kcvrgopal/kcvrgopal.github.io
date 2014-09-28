@@ -1,0 +1,89 @@
+  <!doctype html>
+  <html>
+  <head>
+  <meta charset="UTF-8">
+  <title>Quiz</title>
+    <script language="javascript">
+	function clearSelection()
+  {
+	  window.location.reload();
+  }
+  
+  function saveAndContinue()
+  {
+	  var res;
+	  	  var a= document.getElementById('correct').getAttribute('data-q5');
+	  if((document.getElementById(a)).checked)
+	  {
+		  res=1;
+	  }
+	  else
+	  {
+		  res = 0;
+	  }
+	var q = window.localStorage.setItem("s5",res);  
+	window.location.replace("survey.html");
+  }
+  </script>
+  </head>
+  
+  <body>
+  <table align="center" frame="box">
+  <header>
+  <th bgcolor="#B5B4B4" colspan="3" align="center" valign="middle">
+  Question 4
+  </th></header>
+  <tr>
+  <td colspan="3" align="center" valign="middle">
+  Watch the video and answer the following question.
+  <br>
+  What is the source as mentioned in the video?
+  </td>
+  </tr>
+  <tr>
+  <td width="187" rowspan="2">
+  <input data-q5="correct" id="correct" type="radio" name="2.a" value="2.a" />
+  Nasa.gov
+  </td>
+  <td width="194" rowspan="2">
+   <input type="radio" name="2.b" value="2.b" />
+  Data.gov
+  </td>
+  <td rowspan="3">
+  <video width="320" height="240" controls>
+  <source src="nasa.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+  </td>
+  </tr>
+  <tr></tr>
+  <tr >
+  <td width="187" rowspan="2">
+   <input type="radio" name="2.c" value="2.c" />
+Facebook  </td>
+  
+  <td width="194" rowspan="2">
+   <input type="radio" name="2.d" value="2.d" />
+Twitter  </td>
+  </tr>
+  <tr></tr>
+  <tr></tr>
+  <tr>
+  <td rowspan="2">
+  <button onClick="saveAndContinue()" type="button">Submit & next question</button>
+  </td>
+  <td rowspan="2">
+   <button onClick="clearSelection()" type="button">Cancel & clear selection</button>
+  </td>
+  </tr>
+  </table>
+  <br>
+ 
+    <footer align="center">Sample Quiz</footer>
+  </body>
+  </html>
+  
+  
+  
+  </body>
+  </html>

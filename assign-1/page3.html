@@ -1,0 +1,124 @@
+  <!doctype html>
+  <html>
+  <head>
+  <meta charset="UTF-8">
+  <title>Quiz</title>
+  <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+
+    <script>
+	function blank1()
+	{
+		console.log("Clicked");
+		$('#one').attr('disabled', false);
+		document.getElementById("two").style.display='none';
+		document.getElementById("one").style.display='block';
+	}
+	function blank2()
+	{
+		console.log("Clicked2");
+		document.getElementById("one").style.display='none';
+		document.getElementById("two").style.display='block';
+	}
+	</script>
+	<script language="javascript">
+	function clearSelection()
+  {
+	  window.location.reload();
+  }
+  
+	function changeIt(val, mark)
+	{
+		console.log(val);
+		var item = "mark"+mark;
+		console.log("mark"+mark);
+		document.getElementById(item).innerHTML=val;	
+	}
+  function saveAndContinue()
+  {
+	  
+	  var res1;
+	  var a= document.getElementById('correct1').getAttribute('data-q3');
+	  if((document.getElementById(a)).checked)
+	  {
+		  res1=1;
+	  }
+	  else
+	  {
+		  res1 = 0;
+	  }
+	var q = window.localStorage.setItem("s3",res1);  
+		  var res2;	  
+	  var a= document.getElementById('correct2').getAttribute('data-q4');
+	  if((document.getElementById(a)).checked)
+	  {
+		  res2=1;
+	  }
+	  else
+	  {
+		  res2 = 0;
+	  }
+	var q = window.localStorage.setItem("s4",res2);  
+	window.location.replace("page4.html");
+  }
+  </script>
+  </head>
+  
+  <body>
+  <table align="center" frame="box">
+  <header>
+  <th bgcolor="#B5B4B4" colspan="4" align="center" valign="middle">
+  Question 3
+  </th></header>
+  <tr>
+  <td colspan="4" align="left" valign="middle">
+  As per the latest twitter news, complete the article snippet given by selecting appropriate choices for the blanks.
+  </td>
+  </tr>
+  <tr>
+  <td></td>
+  <td colspan="3" align="justified" valign="middle">
+  Twitter wants more cash. The company announced two <div onClick="blank1()"><mark><label id="mark1">_____</label></mark> </div> million debt offerings in a filing today, each with a potential $100 increase provided that the sales are oversubscribed. Assuming full tip, including the $100 million boosters, <div onClick="blank2()"><mark id="mark2">_____</mark></div> will raise up to $1.5 billion with the two offerings.
+  </td>
+  </tr><tr >
+  <tr></tr>
+  <td width="187">
+  <div hidden="true" id="one">
+   <input onChange="changeIt(650,1)" type="radio" data-q3="correct1" name="correct1" id="correct1" />
+$650  <br>
+   <input onChange="changeIt(550,1)" type="radio" name="3.1.b" id="3.1.b" />
+$550  <br>
+   <input onChange="changeIt(450,1)" type="radio" name="3.1.c" id="3.1.c" />
+$450 </div></td>
+
+  
+  <td width="194">
+  <div hidden="true" id="two">
+   <input onChange="changeIt('Twitter',2)" type="radio" data-q4="correct2" name="correct2" id="correct2" />
+Twitter  <br>
+   <input onChange="changeIt('Google',2)" type="radio" name="3.2.b" id="3.2.b" />
+Google <br>
+   <input onChange="changeIt('Facebook',2)" type="radio" name="3.2.c" id="3.2.c" />
+Facebook 
+</div>
+</td>
+  </tr>
+  <tr></tr>
+  <tr></tr>
+  <tr>
+  <td>
+  <button onClick="saveAndContinue()" type="button">Submit & next question</button>
+  </td>
+  <td>
+   <button onClick="clearSelection()" type="button">Cancel & clear selection</button>
+  </td>
+  </tr>
+  </table>
+  <br>
+    <footer align="center">Sample Quiz</footer>
+  </body>
+  </html>
+  
+  
+  
+  </body>
+  </html>

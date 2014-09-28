@@ -1,0 +1,89 @@
+  <!doctype html>
+  <html>
+  <head>
+  <meta charset="UTF-8">
+  <title>Quiz</title>
+  <script language="javascript">
+  function clearStore()
+  {
+	window.localStorage.clear();  
+  }
+  
+  function clearSelection()
+  {
+	  window.location.reload();
+  }
+  
+  function saveAndContinue()
+  {
+	  var res;	  
+	  var a= document.getElementById('correct').getAttribute('data-q1');
+	  if((document.getElementById(a)).checked)
+	  {
+		  res=1;
+	  }
+	  else
+	  {
+		  res = 0;
+	  }
+	var q = window.localStorage.setItem("s1",res);  
+	window.location.replace("page2.html");
+  }
+  </script>
+  </head>
+  
+  <body onLoad="clearStore()">
+  <table align="center" frame="box">
+  <header><th bgcolor="#B5B4B4" colspan="3" align="center" valign="middle">
+  Question 1
+  </th></header>
+  <tr>
+  <td colspan="3" align="center" valign="middle">
+  Given points (x1,y1) and (x2,y2) select the formula to find the equation of the given line
+  </td>
+  </tr>
+  <tr>
+  <td width="187" rowspan="2">
+  <input type="radio" name="1.a" value="1.a" />
+  <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>y</mi><mo>=</mo><mi>m</mi><mi>x</mi><mo>+</mo><mi>b</mi></math>
+  </td>
+  <td width="194" rowspan="2">
+   <input type="radio" name="1.b" value="1.b" />
+  <math xmlns="http://www.w3.org/1998/Math/MathML"><mo>(</mo><mi>x-h</mi><msup><mo>)</mo><mn>2</mn></msup><mo>+</mo><mo>(</mo><mi>y-k</mi><msup><mo>)</mo><mn>2</mn></msup><msup><mo>=r</mo><mn>2</mn></msup></math>
+  </td>
+  <td width="170" rowspan="4">
+  <img src="line.png"/>
+  </td>
+  </tr>
+  <tr></tr>
+  <tr >
+  <td width="187" rowspan="2">
+   <input type="radio" name="1.c" value="1.c" />
+<math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>y-y</mi><mn>1</mn></msub><mo>=m</mo><mo>(</mo><msub><mi>x-x</mi><mn>1</mn></msub><mo>)</mo></math>
+  </td>
+  
+  <td width="194" rowspan="2">
+   <input type="radio" data-q1="correct"  id="correct" name="1.d" value="1.d" />
+<math xmlns="http://www.w3.org/1998/Math/MathML"><mi>y</mi><mo>-</mo><msub><mi>y</mi><mn>2</mn></msub><mo>=</mo><mfrac><mrow><msub><mi>y</mi><mn>2</mn></msub><mo>-</mo><msub><mi>y</mi><mn>1</mn></msub></mrow><mrow><msub><mi>x</mi><mn>2</mn></msub><mo>-</mo><msub><mi>x</mi><mn>1</mn></msub></mrow></mfrac><mo>(</mo><mi>x</mi><mo>-</mo><msub><mi>x</mi><mn>2</mn></msub><mo>)</mo></math>
+  </td>
+  </tr>
+  <tr></tr>
+  <tr></tr>
+  <tr>
+  <td rowspan="2">
+  <button type="button" onClick="saveAndContinue()">Submit & next question</button>
+  </td>
+  <td rowspan="2">
+   <button onClick="clearSelection()" type="button">Cancel & clear selection</button>
+  </td>
+  </tr>
+  </table>
+  <br>
+  <footer align="center">Sample Quiz</footer>
+  </body>
+  </html>
+  
+  
+  
+  </body>
+  </html>
