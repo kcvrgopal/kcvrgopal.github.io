@@ -189,6 +189,7 @@ function goNow()
 	  saveToLocalStorage(localKey,regObj.toJSONString(regObj));
 	  saveToSessionStorage(sessionKey,regObj.toJSONString(regObj));
 	  var message  = "Your key for localStorage is \" "+localKey+" \" \n for sessionStorage is \" "+sessionKey+" \"";
+	  alert(message);
 	}
 	
 	function saveToLocalStorage(key,obj)
