@@ -233,3 +233,7 @@ function goNow()
 		 alert(result);
 	}
 	
+	function printIt()
+	{
+		window.print() 	
+	}
