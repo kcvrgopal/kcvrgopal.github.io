@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript">
+        var watchID;
+        var geoLoc;
+        var oldPosition;
+        function showLocation(position) {
+            var latitude = position.coords.latitude;
+            var longitude = position.coords.longitude;
+            if(oldPosition==undefined)
+            {
+                alert("Your are at Latitude : " + latitude + " Longitude: " + longitude);
+                oldPosition=position;
+                return;
+            }
+
+            var oldLat = oldPosition.coords.latitude;
+            var oldLong = oldPosition.coords.longitude;
+
+            if((Math.floor(oldLat) != Math.floor(latitude))||(Math.floor(oldLong)!=Math.floor(longitude))) {
+                alert("You are Moving!!!\n"+"You are at Latitude : " + latitude + " Longitude: " + longitude);
+                oldPosition=position;
+            }
+            console.log(position.coords.latitude+position.coords.longitude+(oldPosition.coords.latitude==position.coords.latitude));
+
+        }
+
+        function errorHandler(err) {
+            if(err.code == 1) {
+                alert("Error: Access is denied!");
+            }else if( err.code == 2) {
+                alert("Error: Position is unavailable!");
+            }
+        }
+        function getLocationUpdate(){
+
+            if(navigator.geolocation){
+                // timeout at 60000 milliseconds (60 seconds)
+                var options = {maximumAge:60};
+                geoLoc = navigator.geolocation;
+                watchID = geoLoc.watchPosition(showLocation,
+                        errorHandler,
+                        options);
+            }else{
+                alert("Sorry, browser does not support geolocation!");
+            }
+        }
+    </script>
+</head>
+<body>
+
+<form>
+    <br><br><br><br><br><br><br><br>
+    <div align="center" valign="center">
+    <button class="btn btn-success" type="button" onclick="getLocationUpdate();">
+    <span class="glyphicon glyphicon-screenshot"> Track Me</span>
+        </button></div>
+</form>
+</body>
+</html>
