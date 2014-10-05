@@ -14,20 +14,23 @@
         function showLocation(position) {
             var latitude = position.coords.latitude;
             var longitude = position.coords.longitude;
-            if(oldPosition==undefined)
+            if(oldPosition!=undefined)
+            {
+            var oldLat = oldPosition.coords.latitude;
+            var oldLong = oldPosition.coords.longitude;
+            if((Math.floor(oldLat) != Math.floor(latitude))||(Math.floor(oldLong)!=Math.floor(longitude)))
             {
                 alert("Your are at Latitude : " + latitude + " Longitude: " + longitude);
                 oldPosition=position;
-                return;
             }
-
-            var oldLat = oldPosition.coords.latitude;
-            var oldLong = oldPosition.coords.longitude;
-
-            if((Math.floor(oldLat) != Math.floor(latitude))||(Math.floor(oldLong)!=Math.floor(longitude))) {
-                alert("You are Moving!!!\n"+"You are at Latitude : " + latitude + " Longitude: " + longitude);
+            }
+            else
+            {
+                alert("Your are at Latitude : " + latitude + " Longitude: " + longitude);
                 oldPosition=position;
             }
+
+
             console.log(position.coords.latitude+" "+position.coords.longitude);
 
         }
