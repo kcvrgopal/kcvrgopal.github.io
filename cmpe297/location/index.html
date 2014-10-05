@@ -18,6 +18,7 @@
             {
             var oldLat = oldPosition.coords.latitude;
             var oldLong = oldPosition.coords.longitude;
+            alert((Math.floor(oldLat) +" "+ Math.floor(latitude))+" == " +(Math.floor(oldLat) != Math.floor(latitude)));
             if((Math.floor(oldLat) != Math.floor(latitude))||(Math.floor(oldLong)!=Math.floor(longitude)))
             {
                 alert("Your are at Latitude : " + latitude + " Longitude: " + longitude);
