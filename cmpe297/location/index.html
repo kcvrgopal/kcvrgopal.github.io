@@ -11,7 +11,6 @@
         var geoLoc;
         var oldPosition;
         
-        
         function showLocation(position) {
             var latitude = position.coords.latitude;
             var longitude = position.coords.longitude;
@@ -43,9 +42,9 @@
         function getLocationUpdate(){
 
             if(navigator.geolocation){
-                geoLoc = window.navigator.geolocation;
+                geoLoc = navigator.geolocation;
                 watchID = geoLoc.watchPosition(showLocation,
-                        errorHandler,{maximumAge: 250,enableHighAccuracy: true);
+                        errorHandler,{maximumAge: 250,enableHighAccuracy: true} );
             }else{
                 alert("Sorry, browser does not support geolocation!");
             }
