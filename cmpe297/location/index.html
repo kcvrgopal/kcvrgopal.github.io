@@ -18,21 +18,23 @@
             {
             var oldLat = oldPosition.coords.latitude;
             var oldLong = oldPosition.coords.longitude;
-            alert((Math.floor(oldLat) +" "+ Math.floor(latitude))+" == " +(Math.floor(oldLat) != Math.floor(latitude)));
             if((Math.floor(oldLat) != Math.floor(latitude))||(Math.floor(oldLong)!=Math.floor(longitude)))
             {
                 alert("Your are at Latitude : " + latitude + " Longitude: " + longitude);
                 oldPosition=position;
+                console.log("You are moving");
+            }
+            else
+            {
+                console.log("You are not moving");
             }
             }
             else
             {
                 alert("Your are at Latitude : " + latitude + " Longitude: " + longitude);
+                console.log("First Entry");
                 oldPosition=position;
             }
-
-            alert(longitude+" "+latitude)
-            console.log(position.coords.latitude+" "+position.coords.longitude);
 
         }
 
