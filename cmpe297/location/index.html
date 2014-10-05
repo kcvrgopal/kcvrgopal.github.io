@@ -28,7 +28,7 @@
                 alert("You are Moving!!!\n"+"You are at Latitude : " + latitude + " Longitude: " + longitude);
                 oldPosition=position;
             }
-            console.log(position.coords.latitude+position.coords.longitude+(oldPosition.coords.latitude==position.coords.latitude));
+            console.log(position.coords.latitude+" "+position.coords.longitude);
 
         }
 
@@ -41,10 +41,9 @@
         }
         function getLocationUpdate(){
 
-            if(navigator.geolocation){
-                geoLoc = navigator.geolocation;
-                watchID = geoLoc.watchPosition(showLocation,
-                        errorHandler,{maximumAge: 250,enableHighAccuracy: true} );
+            if(window.navigator.geolocation){
+                geoLoc = window.navigator.geolocation;
+                watchID = geoLoc.watchPosition(showLocation,errorHandler,{maximumAge: 25,enableHighAccuracy: true} );
             }else{
                 alert("Sorry, browser does not support geolocation!");
             }
