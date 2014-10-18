@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+    <script src="js/sourcescript.js"></script>
+    <script language="javascript">
+        console.log(google);
+        </script>
+        <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script language="javascript">
+        function displayGraph()
+        {
+            var data = [];
+            var chicken = document.getElementById('chicken').value;
+            var pork = document.getElementById('pork').value;
+            var ham = document.getElementById('ham').value;
+            var bacon = document.getElementById('bacon').value;
+            var beef = document.getElementById('beef').value;
+
+            var jalapenos = document.getElementById('jalapenos').value;
+            var onions = document.getElementById('onions').value;
+            var redpepper = document.getElementById('redpepper').value;
+            var greenpepper = document.getElementById('greenpepper').value;
+            var bananapepper = document.getElementById('bananapepper').value;
+            var artichokes = document.getElementById('artichokes').value;
+            var mushrooms = document.getElementById('mushrooms').value;
+            var olives = document.getElementById('olives').value;
+            var tomatoes = document.getElementById('tomatoes').value;
+            var garlic = document.getElementById('garlic').value;
+
+            if(parseInt(chicken)!=0) data.push(new Array("chicken", parseInt(chicken)));
+            if(parseInt(pork)!=0) data.push(new Array("pork",parseInt(pork)));
+            if(parseInt(ham)!=0) data.push(new Array("ham",parseInt(ham)));
+            if(parseInt(bacon)!=0) data.push(new Array("bacon",parseInt(bacon)));
+            if(parseInt(beef)!=0) data.push(new Array("beef",parseInt(beef)));
+            if(parseInt(jalapenos)!=0) data.push(new Array("jalapenos",parseInt(jalapenos)));
+            if(parseInt(redpepper)!=0) data.push(new Array("redpepper",parseInt(redpepper)));
+            if(parseInt(greenpepper)!=0) data.push(new Array("greenpepper",parseInt(greenpepper)));
+            if(parseInt(bananapepper)!=0) data.push(new Array("bananapepper",parseInt(bananapepper)));
+            if(parseInt(olives)!=0) data.push(new Array("olives",parseInt(olives)));
+            if(parseInt(tomatoes)!=0) data.push(new Array("tomatoes",parseInt(tomatoes)));
+            if(parseInt(garlic)!=0) data.push(new Array("garlic",parseInt(garlic)));
+            if(parseInt(onions)!=0) data.push(new Array("onions",parseInt(onions)));
+            if(parseInt(artichokes)!=0) data.push(new Array("artichokes", parseInt(artichokes)));
+            if(parseInt(mushrooms)!=0) data.push(new Array("mushrooms", parseInt(mushrooms)));
+            visualize(data);
+        }
+
+    </script>
+</head>
+<body>
+<br>
+<br>
+<br>
+<div class="container-fluid" style="
+    width: 900px;
+">
+    <ul class="breadcrumb">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Cheese</a></li>
+        <li class="active">Toppings</li>
+    </ul>
+    <marquee><span class="text-info" > Offer just for you. Select unlimited toppings when you order online today</span></marquee>
+
+
+</div>
+
+<br>
+<div class="container-fluid"style="
+    width: 900px;
+" value="0">
+
+    <div align="center" class="table-responsive">
+        <table class="table-responsive">
+            <tr>
+            <td valign="top" style="
+    width: 450px;
+">
+Chicken: <input id="chicken" type="range" min="0" max="100" style="
+    width: 150px;
+" value="0"/>
+                <br>
+                Pork     <input  id="pork" type="range" min="0" max="100" style="
+    width: 175px;
+" value="0"/>
+                <br>
+                Ham     <input  id="ham" type="range" min="0" max="100" style="
+    width: 175px;
+" value="0"/>
+                <br>
+                Bacon     <input  id="bacon" type="range" min="0" max="100" style="
+    width: 175px;
+" value="0"/>
+                <br>
+                Beef     <input id="beef" type="range" min="0" max="100" style="
+    width: 175px;
+" value="0"/>
+            </td>
+            <td valign="top" style="
+    width: 450px;
+">
+                Jalapenos     <input id="jalapenos" type="range" min="0" max="100" style="
+    width: 175px;
+" value="0"/>
+                <br>
+                Onions     <input id="onions" type="range" min="0" max="100" style="
+    width: 175px;
+" value="0"/>
+                <br>
+                Roasted Red Pepper     <input id="redpepper" type="range" min="0" max="100" style="
+    width: 175px;
+" value="0"/>
+                <br>
+                Green Pepper     <input id="greenpepper" type="range" min="0" max="100" style="
+    width: 175px;
+" value="0"/>
+                <br>
+                Banana Pepper     <input id="bananapepper" type="range" min="0" max="100" style="
+    width: 175px;
+" value="0"/>
+                <br>
+                Artichokes     <input id="artichokes" type="range" min="0" max="100" style="
+    width: 175px;
+" value="0"/>
+                <br>
+                Mushrooms     <input id="mushrooms" type="range" min="0" max="100" style="
+    width: 175px;
+" value="0"/>
+                <br>
+                Black Olives     <input id="olives" type="range" min="0" max="100" style="
+    width: 175px;
+" value="0"/>
+                <br>
+                Diced Tomatoes     <input id="tomatoes" type="range" min="0" max="100" style="
+    width: 175px;
+" value="0"/>
+                <br>
+                Roasted Garlic     <input id="garlic" type="range" min="0" max="100" style="
+    width: 175px;
+" value="0"/>
+                <br>
+            </td>
+            </tr>
+<tr>
+
+</tr>
+            <tr>
+                <td align="right">
+                    <button onclick="displayGraph()" class="btn btn-success"> Visualize </button>
+                </td>
+                <td align="left">
+
+                    <button onclick="canceller()" class="btn btn-danger"/> Cancel </button>
+
+                </td>
+
+            </tr>
+
+
+        </table>
+
+    </div>
+    <div>
+            <div align="left" id="piechart" style="width: 900px; height: 500px;"></div>
+
+            <div align="right" id="donutchart" style="width: 900px; height: 500px;"></div>
+    </div>
+</div>
+
+</body>
+</html>
