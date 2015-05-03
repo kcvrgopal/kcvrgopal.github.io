@@ -3,6 +3,39 @@
  * Code licensed under the Apache License v2.0.
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
+
+.parallax {
+    perspective: 1px;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    perspective-origin-x: 100%;
+}
+.parallax__layer {
+    position: absolute;
+    transform-origin-x: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.parallax__layer--fore {
+    -webkit-transform: translateZ(90px) scale(.7);
+    transform: translateZ(90px) scale(.7);
+    z-index: 1;
+}
+.parallax__layer--base {
+    transform: translateZ(0);
+}
+.parallax__layer--back {
+    transform: translateZ(-1px) scale(2);
+}
+.parallax__layer--deep {
+    transform: translateZ(-2px) scale(3);
+}
+.parallax__group {
+    transform: translate3d(700px, 0, -800px) rotateY(30deg);
+}
 .responsive-video {
     position: relative;
     padding-bottom: 56.25%;
@@ -210,6 +243,8 @@ aside {
         color: #f05f40;
     }
 }
+.overlay-bg { background-image: url(../img/bg.png); background-color: rgba(0, 0, 0, 0.4); position: fixed; top: 0; left: 0; width: 100%; min-height: 100%; z-index: 9; }
+
 
 header {
     position: relative;
