@@ -243,7 +243,7 @@ aside {
         color: #f05f40;
     }
 }
-.overlay-bg { background-image: url(../img/bg.png); background-color: rgba(0, 0, 0, 0.4); position: fixed; top: 0; left: 0; width: 100%; min-height: 100%; z-index: 9; }
+.overlay-bg { background-image: url(../img/bg_grad.JPG); background-color: rgba(0, 0, 0, 0.4); position: fixed; top: 0; left: 0; width: 100%; min-height: 100%; z-index: 9; }
 
 
 header {
@@ -252,12 +252,13 @@ header {
     min-height: auto;
     text-align: center;
     color: #fff;
-    background-image: url(../img/bg.png);
+    background-image: url(../img/bg_grad.JPG);
     background-position: center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
+
 }
 
 header .header-content {

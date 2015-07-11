@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tagClouds>
+  <einstellungen>
+    <allgemein modus="fliegen" breite="400" hoehe="250" hintergrundfarbe="0xFFFFFF" rahmenfarbe="0xFFFFFF"/>
+    <wolke prozentsatz_vertikal=""/>
+    <globus radius="" maximale_Drehgeschwindigkeit=""/>
+    <fliegen geschwindigkeit_aktiv="2" geschwindigkeit_passiv="1" richtung="vorwaerts"/>
+    <schrift schriftart="Arial" kleinste_Schriftgr="12" groesste_Schriftgr="22" link_dekoration="nounderline"/>
+    <farbe wert="0xFF7600"/>
+    <farbe wert="0x87A800"/>
+    <farbe wert="0xDE2159"/>
+    <farbe wert="0x039FAF"/>
+  </einstellungen>
+  <tag linkURL="" prioritaet="10" text="C#" target="_self"/>
+  <tag linkURL="" prioritaet="10" text=".Net" target="_self"/>
+  <tag linkURL="" prioritaet="9" text="Java" target="_self"/>
+  <tag linkURL="" prioritaet="8" text="Python" target="_self"/>
+  <tag linkURL="" prioritaet="7" text="JavaScript" target="_self"/>
+  <tag linkURL="" prioritaet="10" text="MySQL" target="_self"/>
+  <tag linkURL="" prioritaet="8" text="MongoDB" target="_self"/>
+  <tag linkURL="" prioritaet="8" text="CouchDB" target="_self"/>
+  <tag linkURL="" prioritaet="8" text="RDBMS" target="_self"/>
+  <tag linkURL="" prioritaet="8" text="Github" target="_self"/>
+  <tag linkURL="" prioritaet="6" text="C++" target="_self"/>
+  <tag linkURL="" prioritaet="5" text="C" target="_self"/>
+  <tag linkURL="" prioritaet="6" text="Jenkins" target="_self"/>
+  <tag linkURL="" prioritaet="8" text="OctopusDeploy" target="_self"/>
+  <tag linkURL="" prioritaet="4" text="NUnit" target="_self"/>
+  <tag linkURL="" prioritaet="9" text="Android" target="_self"/>
+  <tag linkURL="" prioritaet="8" text="WindowsPhone" target="_self"/>
+  <tag linkURL="" prioritaet="4" text="Django" target="_self"/>
+  <tag linkURL="" prioritaet="7" text="Git" target="_self"/>
+  <tag linkURL="" prioritaet="10" text="Sub Version" target="_self"/>
+  <tag linkURL="" prioritaet="8" text="Bottle" target="_self"/>
+  <tag linkURL="" prioritaet="9" text="Flask" target="_self"/>
+  <tag linkURL="" prioritaet="2" text="Redis" target="_self"/>
+  <tag linkURL="" prioritaet="5" text="ServiceStack" target="_self"/>
+  <tag linkURL="" prioritaet="3" text="MassTransit" target="_self"/>
+  <tag linkURL="" prioritaet="3" text="JQuery" target="_self"/>
+  <tag linkURL="" prioritaet="3" text="Backbone" target="_self"/>
+  <tag linkURL="" prioritaet="3" text="ReactJs" target="_self"/>
+  <tag linkURL="" prioritaet="5" text="HTML" target="_self"/>
+  <tag linkURL="" prioritaet="6" text="CSS" target="_self"/>
+  <tag linkURL="" prioritaet="3" text="REST" target="_self"/>
+</tagClouds>
